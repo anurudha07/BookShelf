@@ -2,5 +2,4 @@
 
 < Project Under Development >
 
- Will be updated soon
-## :(
+ Will be updated soon :(
