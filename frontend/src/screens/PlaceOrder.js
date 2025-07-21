@@ -33,7 +33,8 @@ class PlaceOrder extends Component {
     const itemsPrice = cartItems
       .reduce((acc, item) => acc + item.qty * item.price, 0)
       .toFixed(2);
-    const shippingPrice = itemsPrice > 100 ? 0 : 100;
+    // Use $20 flat shipping charge for orders <= $100, free otherwise
+    const shippingPrice = itemsPrice > 100 ? 0 : 20;
     const taxPrice = this.addDecimals(Number((0.05 * itemsPrice).toFixed(2)));
     const totalPrice = (
       Number(itemsPrice) +
@@ -170,7 +171,10 @@ class PlaceOrder extends Component {
                   <Button
                     type="button"
                     className="btn-block"
-                    disabled={cart.cartItems.length === 0 || this.props.getLoginInfoData.userInfo.isAdmin}
+                    disabled={
+                      cart.cartItems.length === 0 ||
+                      this.props.getLoginInfoData.userInfo.isAdmin
+                    }
                     onClick={this.placeOrderHandler}
                   >
                     Place Order
