@@ -25,28 +25,23 @@ npm install
 # Frontend
 cd ../frontend
 npm install
+
 Environment
 Create .env files in backend and frontend:
 
 backend/.env
 
-ini
-Copy
-Edit
 MONGO_URI=your_mongo_uri
 JWT_SECRET=your_jwt_secret
 PAYPAL_CLIENT_ID=your_paypal_id
 PORT=5000
+
+
 frontend/.env
 
-ini
-Copy
-Edit
 REACT_APP_API_BASE=http://localhost:5000
-Run
-bash
-Copy
-Edit
+
+
 # Start backend
 npm run server
 
@@ -57,23 +52,9 @@ MIT
 
 Developed by Anurudha
 
-vbnet
-Copy
-Edit
-
-Let me know if you'd like to add screenshots, usage instructions, or deploy info (like Vercel/Render links).
 
 
 
-
-
-
-
-Ask ChatGPT
-
-
-
-Tools
 
 
 
