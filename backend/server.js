@@ -37,7 +37,7 @@ app.get("/api/config/paypal", (req, res) =>
 );
 
 // Serve uploaded files
-app.use("/uploads", express.static(path.join(__dirname, "/backend/uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 // ✅ Serve frontend in production
 if (process.env.NODE_ENV === "production") {
