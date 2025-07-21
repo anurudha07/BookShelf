@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "serve -s build",
-    "server": "nodemon backend/server",
+    "server": "node backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:destroy": "node backend/seeder -d",
