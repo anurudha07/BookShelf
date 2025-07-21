@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import Loader from "../component/Loader";
 import Error from "../component/common/Error";
 import axios from "axios";
-import client from "../api/client";
+
 class Register extends Component {
   constructor() {
     super();
@@ -43,8 +43,8 @@ class Register extends Component {
       },
     };
 
-    await client
-      .post("/users/register", { name, email, password })
+    await axios
+      .post("/api/users", { name, email, password }, config)
       .then((data) => {
         this.setState({
           confirm_register: true,
