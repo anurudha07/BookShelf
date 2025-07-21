@@ -21,10 +21,12 @@ BookShelf is a minimal full-stack MERN bookstore app for browsing and buying boo
 # Backend
 cd backend
 npm install
+npm run server
 
 # Frontend
 cd ../frontend
 npm install
+npm start
 
 Environment
 Create .env files in backend and frontend:
