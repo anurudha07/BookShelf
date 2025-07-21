@@ -7,7 +7,7 @@ BookShelf is a minimal full-stack MERN bookstore app for browsing and buying boo
 - 🛒 Add to cart & checkout
 - 💳 PayPal payment integration
 - 🧾 Order history
-- ⭐ Admin dashboard for product & order management
+- ⭐ Admin dashboard for user, product & order management
 - 🌐 Fully responsive design
 
 ## Tech Stack
