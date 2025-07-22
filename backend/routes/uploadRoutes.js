@@ -1,42 +1,33 @@
-import path from "path";
 import express from "express";
+import { v2 as cloudinary } from "cloudinary";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
 import multer from "multer";
 
 const router = express.Router();
 
-const storage = multer.diskStorage({
-  destination(req, file, cb) {
-    cb(null, "uploads/");
-  },
-  filename(req, file, cb) {
-    cb(
-      null,
-      `${file.fieldname} - ${Date.now()}${path.extname(file.originalname)}`
-    );
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key:    process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+// Tell multer to use Cloudinary for storage
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "product_images",           // optional: stores all uploads in this folder
+    allowed_formats: ["jpg", "jpeg", "png"],
+    public_id: (req, file) =>
+      `img_${Date.now()}`,               // you control the filename here
   },
 });
 
-function checkFileType(file, cb) {
-  const fileTypes = /jpg|jpeg|png/;
-  const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimetype = fileTypes.test(file.mimetype);
-
-  if (extname && mimetype) {
-    return cb(null, true);
-  } else {
-    cb("Image only");
-  }
-}
-
-const upload = multer({
-  storage,
-  fileFilter: function (req, file, cb) {
-    checkFileType(file, cb);
-  },
-});
+const upload = multer({ storage });
 
 router.post("/", upload.single("image"), (req, res) => {
-  res.send(`/${req.file.path}`);
+  // Cloudinary puts the final URL on req.file.path
+  res.send(req.file.path);
 });
 
 export default router;
