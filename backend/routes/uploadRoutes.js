@@ -12,14 +12,14 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// Tell multer to use Cloudinary for storage
+
 const storage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: "product_images",           // optional: stores all uploads in this folder
+    folder: "product_images",           
     allowed_formats: ["jpg", "jpeg", "png"],
     public_id: (req, file) =>
-      `img_${Date.now()}`,               // you control the filename here
+      `img_${Date.now()}`,          
   },
 });
 
