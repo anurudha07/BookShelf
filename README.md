@@ -11,6 +11,7 @@ BookShelf is a minimal full-stack React.js frontend & Node backend powered books
 - 🌐 Fully responsive design
 
  Tech Stack
+ 
 Frontend: React.js, Redux, React-Bootstrap  
 Backend: Node.js, Express.js, MongoDB, Mongoose  
 Auth: JWT (JSON Web Tokens)  
