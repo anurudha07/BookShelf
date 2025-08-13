@@ -1,6 +1,6 @@
 # BookShelf 📚
 
-BookShelf is a minimal full-stack MERN bookstore app for browsing and buying books online.
+BookShelf is a minimal full-stack React.js frontend & node.js backend based bookstore app for browsing and buying books online.
 
 ## Features
 - 🔐 User authentication with JWT
