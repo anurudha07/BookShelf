@@ -1,8 +1,8 @@
-# BookShelf 📚
+ BookShelf 📚
 
-BookShelf is a minimal full-stack React.js frontend & node.js backend based bookstore app for browsing and buying books online.
+BookShelf is a minimal full-stack React.js frontend & Node backend powered bookstore app for browsing and buying books online.
 
-## Features
+ Features
 - 🔐 User authentication with JWT
 - 🛒 Add to cart & checkout
 - 💳 PayPal payment integration
@@ -10,14 +10,14 @@ BookShelf is a minimal full-stack React.js frontend & node.js backend based book
 - ⭐ Admin dashboard for user, product & order management
 - 🌐 Fully responsive design
 
-## Tech Stack
-**Frontend:** React.js, Redux, React-Bootstrap  
-**Backend:** Node.js, Express.js, MongoDB, Mongoose  
-**Auth:** JWT (JSON Web Tokens)  
-**Payment:** PayPal REST API
+ Tech Stack
+Frontend: React.js, Redux, React-Bootstrap  
+Backend: Node.js, Express.js, MongoDB, Mongoose  
+Auth: JWT (JSON Web Tokens)  
+Payment: PayPal REST API
 
-## Setup
-```bash
+ Setup
+```
 # Backend
 cd backend
 npm install
