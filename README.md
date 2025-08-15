@@ -58,9 +58,3 @@ Developed by Anurudha
 
 
 
-
-
-
-ChatGPT can make mistakes. Check important info. See Cookie Preferences.
-
-
